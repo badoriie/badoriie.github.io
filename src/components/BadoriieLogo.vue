@@ -21,17 +21,22 @@ export default defineComponent({
       };
 
       p.draw = function() {
-        p.background(250);
+        p.background('#181818');
+    
+        p.rotateZ( (p.mouseX + p.mouseY) * 0.001);
+        p.rotateX( p.frameCount * 0.01);
+        p.rotateY( p.frameCount * 0.01);
 
-        p.normalMaterial();
+        if (p.touches.length) {
+          p.rotateX( p.frameCount * 0.06);
+          p.rotateY( p.frameCount * 0.03);
+        } 
 
-        p.push();
-        p.translate(0, 0, 0);
-        p.rotateZ(p.frameCount * 0.01);
-        p.rotateX(p.frameCount * 0.01);
-        p.rotateY(p.frameCount * 0.01);
-        p.box(100, 100, 100);
-        p.pop();
+        p.noFill();
+        p.stroke('#5b49b8');
+        p.strokeWeight(6);
+        p.box(100);
+   
       };
     }
   }
