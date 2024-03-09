@@ -1,15 +1,8 @@
-
-
 <template>
-  
   <div class="greetings">
-    <h1 class="green"> Welcome to my World</h1>
-    <h3>
-      I'm currently working on this webpage. Stay tuned!
-    </h3>
-    
+    <h1 class="green">Welcome to my World</h1>
+    <h3>I'm currently working on this webpage. Stay tuned!</h3>
   </div>
-  
 </template>
 
 <style scoped>

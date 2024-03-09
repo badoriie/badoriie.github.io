@@ -1,17 +1,15 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import BadoriieLogo from './components/BadoriieLogo.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import BadoriieLogo from "./components/BadoriieLogo.vue";
 </script>
 
 <template>
   <header>
     <BadoriieLogo />
     <div class="wrapper">
-      <HelloWorld/>
+      <HelloWorld />
     </div>
   </header>
-
-
 </template>
 
 <style scoped>
