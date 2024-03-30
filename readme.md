@@ -13,5 +13,18 @@ To install the project, follow these steps:
 
 To use the project, run the following command:
 
+```shell
 pnpm run build
+```
+
+```shell
 pnpm run run
+```
+
+```shell
+pnpm run test
+```
+
+```shell
+pnpm run format
+```
