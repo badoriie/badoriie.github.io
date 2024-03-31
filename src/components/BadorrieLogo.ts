@@ -37,9 +37,10 @@ export class BadorrieLogo {
       );
       p.normalMaterial();
       p.push();
-      p.rotateZ(p.frameCount * 0.01);
-      p.rotateX(p.frameCount * 0.01);
-      p.rotateY(p.frameCount * 0.01);
+
+      p.rotateZ(p.PI / 4 + scrollY * 0.001);
+      p.rotateX(p.PI / 4 + scrollY * 0.001);
+      p.rotateY(p.PI / 4 + scrollY * 0.001);
       p.box(
         p.windowWidth * this.scale * 0.5,
         p.windowWidth * this.scale * 0.5,
