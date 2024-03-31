@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es6" /* Specify ECMAScript target version */,
-    "module": "commonjs" /* Specify module system */,
-    "strict": true /* Enable all strict type-checking options */,
-    "esModuleInterop": true /* Enable compatibility with CommonJS modules */,
-    "forceConsistentCasingInFileNames": true /* Ensure consistent casing of file names */,
-    "outDir": "docs",
-    "typeRoots": ["node_modules/@types"]
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
-  "include": ["src/**/*.ts" /* Specify files to include for compilation */],
-  "exclude": ["node_modules" /* Specify files to exclude from compilation */]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
