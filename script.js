@@ -1,6 +1,8 @@
 // Get system theme preference
 function getSystemTheme() {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';
 }
 
 // Apply theme to the page
@@ -14,6 +16,15 @@ function applyTheme(theme) {
   }
 }
 
+// Copy to clipboard function
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    console.log('Copied to clipboard!');
+  }).catch(err => {
+    console.error('Failed to copy:', err);
+  });
+}
+
 // Apply system theme on page load
 window.onload = function() {
   applyTheme(getSystemTheme());
@@ -23,4 +34,4 @@ window.onload = function() {
     const newTheme = e.matches ? 'dark' : 'light';
     applyTheme(newTheme);
   });
-}
+};
