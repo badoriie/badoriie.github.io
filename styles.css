@@ -4,6 +4,11 @@ body {
   margin-top: 5%;
 }
 
+h5 {
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
 .light-mode {
   background-color: #e8e8e8;
 }
@@ -13,6 +18,7 @@ body {
 }
 
 .content-frame {
+  position: relative;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -104,3 +110,18 @@ table td {
 .copy-btn:hover {
   opacity: 1;
 }
+
+.qr-code {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  width: 80px;
+  height: 80px;
+  transition: opacity 0.2s;
+}
+
+.qr-code:hover {
+  opacity: 0.8;
+}
+

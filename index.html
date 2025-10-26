@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Amir Nasari</title>
+    <title>Badoriie</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
@@ -10,9 +15,9 @@
       <table>
         <tr>
           <td class="content-frame">
-            <h1>Amir B. Nasari</h1>
-
-            <hr />
+            <div class="qr-code" id="github-qr" title="GitHub Profile"></div>
+            <h1>Amir Nasari</h1>
+            <h5>@badoriie</h5>
 
             <h2>About Me</h2>
             <p>
@@ -22,8 +27,6 @@
               and having a good time along the way. Life's too short not to
               enjoy the puzzles!
             </p>
-
-            <hr />
 
             <h2>Interests</h2>
             <ul>
@@ -52,11 +55,7 @@
               <div class="address-row">
                 <label class="address-label">Public key:</label>
                 <div class="address-content">
-                  <span
-                    class="long-address"
-                    data-full="npub1q5vqemfc4qkscj97wael7clkqstjkj335ykjvydlcep0g888v42qqmy4un"
-                    >npub1q5vqemfc4q...v42qqmy4un</span
-                  >
+                  <span class="long-address">npub1q5vqemfc4q...v42qqmy4un</span>
                   <button
                     class="copy-btn"
                     onclick="copyToClipboard('npub1q5vqemfc4qkscj97wael7clkqstjkj335ykjvydlcep0g888v42qqmy4un')"
@@ -70,11 +69,7 @@
               <div class="address-row">
                 <label class="address-label">Lightning address:</label>
                 <div class="address-content">
-                  <span
-                    class="long-address"
-                    data-full="lno1zrxq8pjw7qjlm68mtp7e3yvxee4y5xrgjhhyf2fxhlphpckrvevh50u0q27nxwl85kattagefxh02neyp07qw4zp7c8ckmtqgwxpks2y6h7nkqsrvjqlez8kvsjvrdd64ycd8tn0x8vwtn9zyx95vr5jv3rq5m4cjqcqqva5f3rlrp56vcs58nmp0fr32c25pdrrlmckwrv6xsplrs4xq75we4ftcxjn65z8nqqj29r0hdn6v903dc7aq0um4kr6xxp7w7tt6mt2d79xwv74cwuwpwhmpchm6dayv0ahkrukzqqs6n92etfamtdqqzq8zd5p9u2aru"
-                    >lno1zrxq8pjw7qj...zd5p9u2aru</span
-                  >
+                  <span class="long-address">lno1zrxq8pjw7qj...zd5p9u2aru</span>
                   <button
                     class="copy-btn"
                     onclick="copyToClipboard('lno1zrxq8pjw7qjlm68mtp7e3yvxee4y5xrgjhhyf2fxhlphpckrvevh50u0q27nxwl85kattagefxh02neyp07qw4zp7c8ckmtqgwxpks2y6h7nkqsrvjqlez8kvsjvrdd64ycd8tn0x8vwtn9zyx95vr5jv3rq5m4cjqcqqva5f3rlrp56vcs58nmp0fr32c25pdrrlmckwrv6xsplrs4xq75we4ftcxjn65z8nqqj29r0hdn6v903dc7aq0um4kr6xxp7w7tt6mt2d79xwv74cwuwpwhmpchm6dayv0ahkrukzqqs6n92etfamtdqqzq8zd5p9u2aru')"

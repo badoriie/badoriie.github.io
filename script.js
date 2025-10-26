@@ -25,13 +25,34 @@ function copyToClipboard(text) {
   });
 }
 
+// Generate QR code
+function generateQRCode() {
+  const qrContainer = document.getElementById('github-qr');
+  if (!qrContainer || typeof QRCode === 'undefined') return;
+
+  qrContainer.innerHTML = '';
+
+  const isDark = document.body.classList.contains('dark-mode');
+
+  new QRCode(qrContainer, {
+    text: 'https://github.com/Badoriie',
+    width: 80,
+    height: 80,
+    colorDark: isDark ? '#ffffff' : '#000000',
+    colorLight: isDark ? '#2a2a2a' : '#ffffff',
+    correctLevel: QRCode.CorrectLevel.M
+  });
+
+  qrContainer.onclick = () => window.open('https://github.com/Badoriie', '_blank');
+}
+
 // Apply system theme on page load
 window.onload = function() {
   applyTheme(getSystemTheme());
+  generateQRCode();
 
-  // Listen for system theme changes
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    const newTheme = e.matches ? 'dark' : 'light';
-    applyTheme(newTheme);
+    applyTheme(e.matches ? 'dark' : 'light');
+    generateQRCode();
   });
 };
