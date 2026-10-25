@@ -45,11 +45,11 @@ h1 {
   margin-bottom: 16px;
 }
 
-/* Keep scrambled Persian characters in left-to-right slots */
-h1,
-.links a {
-  direction: ltr;
-  unicode-bidi: bidi-override;
+/* Fixed-width character slots used by the decipher animation (script.js) */
+.slot {
+  display: inline-block;
+  text-align: center;
+  white-space: pre;
 }
 
 .links {
