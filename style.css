@@ -42,7 +42,7 @@ h1 {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 /* Fixed-width character slots used by the decipher animation (script.js) */
@@ -50,6 +50,24 @@ h1 {
   display: inline-block;
   text-align: center;
   white-space: pre;
+}
+
+.reveal,
+.links {
+  /* Clip the role and email as they slide in after the name settles (script.js);
+     the padding keeps focus outlines from being cut off. */
+  overflow: hidden;
+  padding: 4px;
+}
+
+.reveal {
+  margin-bottom: 4px;
+}
+
+.role {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
 }
 
 .links {
