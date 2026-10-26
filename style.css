@@ -8,8 +8,8 @@
   --bg: #fff;
   --text: #0a0a0a;
   --muted: #6b6b6b;
-  --font: "Helvetica Neue", Helvetica, Arial, "Vazirmatn", sans-serif;
-  --font-mono: "Geist Mono", "Vazirmatn", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
