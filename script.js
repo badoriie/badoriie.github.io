@@ -136,12 +136,12 @@ const decipher = (el, delay = 0, ghostWords = []) => new Promise((done) => {
 
 // Slide an element into view out from behind the name. Its container clips it, so it appears
 // from the container's edge next to the name: `up` for the role above, `down` for the email below.
-const slideOut = (el, direction) => {
+const slideOut = (el, direction, delay = 0) => {
   el.style.visibility = '';
   const from = direction === 'up' ? '100%' : '-100%';
   el.animate(
     [{ transform: `translateY(${from})`, opacity: 0 }, { transform: 'none', opacity: 1 }],
-    { duration: 1300, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
+    { duration: 1300, delay, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'backwards' }
   );
 };
 
@@ -149,13 +149,16 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const name = document.querySelector('h1');
   const email = document.querySelector('.links a');
   const role = document.querySelector('.role');
+  const icons = [...document.querySelectorAll('.social a')];
   // Hide until the web fonts are in, so slot widths are measured with the final fonts.
-  [name, email, role].forEach((el) => (el.style.visibility = 'hidden'));
+  [name, email, role, ...icons].forEach((el) => (el.style.visibility = 'hidden'));
   document.fonts.ready.then(() => {
     name.style.visibility = '';
     decipher(name, 0, GHOST_WORDS).then(() => {
       slideOut(role, 'up');
       slideOut(email, 'down');
+      // The icons follow the email, one after the other.
+      icons.forEach((icon, i) => slideOut(icon, 'down', 250 + i * 120));
     });
   });
 }

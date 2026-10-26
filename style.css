@@ -53,8 +53,9 @@ h1 {
 }
 
 .reveal,
-.links {
-  /* Clip the role and email as they slide in after the name settles (script.js);
+.links,
+.social {
+  /* Clip the role, email and icons as they slide in after the name settles (script.js);
      the padding keeps focus outlines from being cut off. */
   overflow: hidden;
   padding: 4px;
@@ -86,5 +87,21 @@ h1 {
 }
 
 .links a:hover {
+  color: var(--text);
+}
+
+.social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.social a {
+  display: inline-flex;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.social a:hover {
   color: var(--text);
 }
