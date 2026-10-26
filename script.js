@@ -157,8 +157,8 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     decipher(name, 0, GHOST_WORDS).then(() => {
       slideOut(role, 'up');
       slideOut(email, 'down');
-      // The icons follow the email, one after the other.
-      icons.forEach((icon, i) => slideOut(icon, 'down', 250 + i * 120));
+      // The icons follow the email, together.
+      icons.forEach((icon) => slideOut(icon, 'down', 250));
     });
   });
 }
